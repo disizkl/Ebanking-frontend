@@ -1,27 +1,72 @@
-# DigitalBankingWeb
+# Ebanking Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+## Description
+Ebanking est une application de gestion bancaire en ligne permettant aux utilisateurs de gérer leurs comptes, effectuer des transactions et consulter leurs historiques bancaires. L'application est développée avec une architecture backend en J2EE et un frontend en Angular.
 
-## Development server
+## Table des Matières
+- [Fonctionnalités](#fonctionnalités)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Lancement de l'Application](#lancement-de-lapplication)
+- [Utilisation](#utilisation)
+- [Tests](#tests)
+- [Contribution](#contribution)
+- [Licence](#licence)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Fonctionnalités
+- Création et gestion de comptes utilisateurs
+- Consultation des soldes et des historiques de transactions
+- Transferts d'argent entre comptes
+- Gestion des bénéficiaires
+- Notifications et alertes
 
-## Code scaffolding
+## Prérequis
+- Java Development Kit (JDK) 8 ou supérieur
+- Apache Maven
+- Node.js et npm (Node Package Manager)
+- Angular CLI
+- Serveur d'application J2EE (par exemple, Apache Tomcat)
+- Base de données relationnelle (par exemple, MySQL)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+### Backend (J2EE)
+1. Clonez le dépôt :
+    ```bash
+    git clone https://github.com/votre-utilisateur/ebanking-backend.git
+    cd ebanking-backend
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Compilez et packagez l'application :
+    ```bash
+    mvn clean install
+    ```
 
-## Running unit tests
+3. Déployez le fichier WAR généré sur votre serveur d'application J2EE (par exemple, Apache Tomcat).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. Configurez la connexion à la base de données dans le fichier `application.properties` situé dans `src/main/resources`.
 
-## Running end-to-end tests
+### Frontend (Angular)
+1. Clonez le dépôt :
+    ```bash
+    git clone https://github.com/votre-utilisateur/ebanking-frontend.git
+    cd ebanking-frontend
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Installez les dépendances :
+    ```bash
+    npm install
+    ```
 
-## Further help
+3. Configurez les variables d'environnement dans le fichier `src/environments/environment.ts`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Configuration
+
+### Backend
+Assurez-vous de configurer correctement la connexion à la base de données dans le fichier `application.properties` :
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/ebanking
+spring.datasource.username=yourUsername
+spring.datasource.password=yourPassword
+spring.jpa.hibernate.ddl-auto=update
