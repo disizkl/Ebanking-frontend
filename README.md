@@ -70,3 +70,13 @@ spring.datasource.url=jdbc:mysql://localhost:3306/ebanking
 spring.datasource.username=yourUsername
 spring.datasource.password=yourPassword
 spring.jpa.hibernate.ddl-auto=update
+```
+## Lancement de l'application
+
+### Screen de l'application: 
+
+### Page Home  : ![img.png](img.png)
+### Page Accounts : ![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+### Page Customers : ![img_3.png](img_3.png)
+### New Customers : ![img_5.png](img_5.png)
